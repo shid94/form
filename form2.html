@@ -9,6 +9,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" rel="stylesheet"/>
   
   
+  
  <style>
   body {
     background: #efefef;
@@ -24,26 +25,19 @@ p{
 }
 .input-group-text {
     background-color: #f9f9f9;
-    
-
 }
 .btn .btn-sucess{
     background-color: #7fd323;
-
 }
-
 .rounded {
     border-radius: none;
 }
-
 .nav-pills .nav-link {
     margin-right: -6px;
-    color: #000;
+    color: #b7b7b7;
     border: 2px solid #efefef;
-    background-color: #f9f9f9;
-    
+    background-color: #f9f9f9; 
 }
-
 input[type="radio"] {
     margin-right: 5px
 }
@@ -52,9 +46,39 @@ input[type="radio"] {
     font-weight: bold
 }
 .form-control {
-    
+
     background-color: #f9f9f9;
     
+}
+.input {
+    position: relative;
+   
+    color: #b7b7b7;
+}
+
+.input i {
+    position: absolute;
+    top: 12px;
+    left: 11px;
+    color: #b7b7b7;
+}
+.fa, .fas {
+    color: #b7b7b7;
+    font-weight: 900;
+}
+select{
+    background-color: #f9f9f9; 
+}
+option{
+    text-align: center;
+    color: #000;
+}
+.custom-select{
+    color: #000;
+}
+
+.input input {
+    text-indent: 25px
 }
 
 </style>
@@ -65,7 +89,7 @@ input[type="radio"] {
         <!-- For demo purpose -->
         <div class="row mb-4">
             <div class="col-lg-8 mx-auto text-center">
-                <h1 class="display-6">Payment Forms</h1>
+                <!-- <h1 class="display-6">Payment Forms</h1> -->
             </div>
         </div> <!-- End -->
         <div class="row">
@@ -84,7 +108,26 @@ input[type="radio"] {
                                           <span class="input-group-text"><i class="fa fa-user"></i></span>
                                         </div> 
                                         <input id="email" type="text" class="form-control" name="username" placeholder="Full Name">
+                                        
                                     </div><br>
+                                    <!-- start -->
+                                    <!-- <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="card-body payment-card-body"> 
+                                            <div class="input"> <i class="fa fa-credit-card"></i> <input type="text" class="form-control" placeholder="0000 0000 0000 0000"> </div>
+                                            <div class="row mt-3 mb-3">
+                                                <div class="col-md-4"> <span class="font-weight-normal card-text">Expiry Date</span>
+                                                    <div class="input"> <i class="fa fa-calendar"><vr></i> <input type="text" class="form-control" placeholder="MM/YY"> </div>
+                                                </div>
+                                                <div class="col-md-4"> <span class="font-weight-normal card-text">CVC/CVV</span>
+                                                    <div class="input"> <i class="fa fa-lock"></i> <input type="text" class="form-control" placeholder="000"> </div>
+                                                </div>
+                                                <div class="col-md-4"> <span class="font-weight-normal card-text">CVC/CVV</span>
+                                                    <div class="input"> <i class="fa fa-lock"></i> <input type="text" class="form-control" placeholder="000"> </div>
+                                                </div>
+                                            </div> <span class="text-muted certificate-text"><i class="fa fa-lock"></i> Your transaction is secured with ssl certificate</span>
+                                        </div>
+                                    </div> -->
+                                    <!-- end -->
 
                                     <div class="input-group ">
                                         <div class="input-group-prepend">
@@ -158,7 +201,7 @@ input[type="radio"] {
                                                 <div class="input-group-prepend">
                                                   <span class="input-group-text"><i class="fas fa-credit-card mr-2"></i></span>
                                                 </div> 
-                                                <input id="email" type="text" class="form-control" name="username" placeholder="Credit Card">
+                                                <input id="card" type="text" class="form-control" name="usernamecard" placeholder="Credit Card">
                                             </div><br>
                                             
                                    
@@ -172,11 +215,29 @@ input[type="radio"] {
                                               </div>
                                               
                                         </div>
+                                        <!-- end -->
+                                        <!-- <div class="form-group"> 
+                                            <div class="input-group"> <input type="text" class="form-control date-input" id="date-fld" required>
+                                                <div class="input-group-append"><span class="input-group-text  btn btn-default"> <i class="fa fa-calendar"></i> </span> </div>
+                                            </div>
+                                        </div> -->
+                                        <!-- end -->
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
                                                 <div class="input-group"> 
-                                                    <input type="number" placeholder="MM" name="" class="form-control" required> 
-                                                    <input type="number" placeholder="YY" name="" class="form-control" required> </div>
+                                                    <!-- <input type="text"  class="form-control datepicker2" placeholder="DD/MM"> 
+                                                    <input type="text" id="datepicker" class="form-control" placeholder=" YYY"> -->
+                                                        <select class="browser-default custom-select"  style="background-color: #f9f9f9;">
+                                                            <option selected >01 Jan</option>
+                                                            <option value="1" key="color_red">One</option>
+                                                            
+                                                          </select>
+                                                            <select class="browser-default custom-select"  style="background-color: #f9f9f9;">
+                                                            <option selected>2015</option>
+                                                            <option value="1">One</option>
+                                                            
+                                                          </select>
+                                                 </div>
                                             </div>
                                         </div>
                                         
@@ -205,22 +266,31 @@ input[type="radio"] {
             </div>
         </div>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" ></script>
 <script src="https://use.fontawesome.com/releases/v5.8.1/css/all.css" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
-<script>
-    $(function() {
-$('[data-toggle="tooltip"]').tooltip()
-})
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
 
-$("#datepicker").datepicker({
-    format: "yyyy",
-    viewMode: "years", 
-    minViewMode: "years"
-});
+<script type="text/javascript">
+    $("#datepicker").datepicker({
+format: "yyyy",
+viewMode: "years", 
+minViewMode: "years"
+ });
+ 
 </script>
-</html>
-
-</body>
+<script>
+    $(function(){
+       $('.datepicker2').datepicker({
+          format: 'dd-mm'
+          
+        });
+    });
+    </script>
+    <script>
+        $(".date-input").datepicker({
+        // options
+    });
+    </script>
+    
 </html>
